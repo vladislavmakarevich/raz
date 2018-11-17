@@ -1,12 +1,4 @@
-@font-face {
-  font-family: Lato;
-  src: url("../fonts/9623.ttf");
-}
-@font-face {
-  font-family: Lato Bold;
-  src: url("../fonts/9623.ttf");
-}
-
+@import "./lato.css";
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -198,32 +190,404 @@ body {
   }
 .pack-main {
   width: 100%;
-  height: 100vh;
   background: url("../img/Packages.png") no-repeat;
   background-size: 100% 50%;
 }
 .packages {
-  height: 100vh;
+  height: 115vh;
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 2px dotted #d6d6d6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pack-block {
+  height: 566px;
+  width: 253px;
+  background-color: #fff;
+  border-top: 6px solid #f9d423;
+  font-size: 1.6rem;
+  font-family: "Lato";
+  color: rgb(40, 40, 40);
+  font-weight: bold;
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.pack-head {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+.pack-head span {
+  font-size: 1.7rem;
+  font-family: "Lato";
+  color: rgb(40, 40, 40);
+  font-weight: bold;
+}
+.pack-data {
+  height: 50%;
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-top: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+.p-data {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Lato";
+}
+.p-data span {
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: rgb(180, 180, 180);
+} 
+.p-data span:last-child {
+  color:#f9d423;
+}
+.pack-price {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.p-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Lato";
+  color: rgb(44, 44, 44);
+  padding-bottom: 5px;
+}
+.p-price sub {
+  color: #d1d1d1;
+  font-size: 1.3rem;
+  vertical-align: 3px;
+}
+.p-price sup {
+  vertical-align: -1px;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.p-select {
+  font-size: 1.7rem;
+  font-family: "Lato";
+  color: rgb(40, 40, 40);
+  font-weight: bold;
+  border-top: 3px solid #f9d423;
+  height: 30%;
+  padding-top: 20px;
+}
+.pack-block-normal {
+  border-top: 6px solid #7f8c8d;
+}
+.pack-data-normal span:last-child{
+  color: #7f8c8d;
+}
+.p-select-normal {
+  border-top: 3px solid #7f8c8d;
+}
+
+.pack-block-big {
+  border-top: 6px solid #f85f40;
+}
+.pack-data-big span:last-child{
+  color: #f85f40;
+}
+.p-select-big {
+  border-top: 3px solid #f85f40;
+}
+
+.pack-block-biggest {
+  border-top: 6px solid #1abc9c;
+}
+.pack-data-biggest span:last-child{
+  color: #1abc9c;
+}
+.p-select-biggest {
+  border-top: 3px solid #1abc9c;
+}
+
+
+.about-us-main {
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.pack-price {
-  background-color: #fff;
-  height: 75%;
-  width: 255px;
+.about-us-text {
+  width: 43%;
+  height: 190px;
+  border-right: 2px dotted #d6d6d6;
+  display: flex;
+  flex-direction: column;
+  padding-right: 90px;
+  text-align: justify;
+}
+.about-us-text span {
+  font-size: 3.5rem;
+  font-family: "Lato";
+  color: rgb(48, 48, 48);
+}
+.about-us-text p {
+  font-size: 1.5rem;
+  font-family: "Lato";
+  color: rgb(116, 116, 116);
+  line-height: 1.5;
+}
+.about-us-staff {
+  width: 46%;
+  height: 190px;
+  display: flex;
+  justify-content: space-between;
+}
+.about-us-staff .staff:last-child img:first-child {
+  align-self: center;
+}
+.staff {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+}
+.staff img:first-child {
+  padding-bottom: 10px;
+}
+.staff span {
+  text-align: center;
+  font-size: 1.7rem;
+  font-family: "Lato";
+  font-weight: bold;
+  color: rgb(48, 48, 48);
 }
 
+.staff p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-family: "Lato";
+  color: rgb(142, 142, 142);
+}
+.social {
+  display: flex;
+  justify-content: space-around;
+}
+.fab, .fas{
+  font-size: 1.4rem;
+  color: #bfbfbf;
+}
+.fab:hover ,.fas:hover {
+  color: rgb(31, 137, 186);
+}
+.comment-main {
+  height: 190px;
+  background: url("../img/comment-bg.png");
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.coment {
+  width: 886px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.coment span {
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro Regular";
+  font-weight: 100;
+  font-size: 2rem;
+  color: #a6a7a6;
+}
+.coment-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  height: 8px;
+  width: 8px;
+  color: black;
+  border-width: 1px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-radius: 50%;
+  margin: 5px;
+}
+.circle:hover , .circle:focus {
+  border-width: 4px;
+}
+.coment-author span {
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro Regular";
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 255);
+}
+.coment-author span::after {
+  content: "";
+  height: 1.4rem;
+  width: 1px;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: -1px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
+.advantages {
+  height: 340px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #fff;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.advan {
+  height: 150px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.advan span {
+  font-family: "Lato Heavy", "AdobeInvisFont", "MyriadPro Regular";
+  font-size: 1.7rem;
+  color: rgba(48, 48, 48, 255);
+  margin-top: 10px;
+}
+.advan p{
+  font-family: "Lato Light", "AdobeInvisFont", "MyriadPro Regular";
+  font-size: 1.5rem;
+  color: rgba(126, 126, 126, 255);
+  text-align: center;
+  margin:0;
+}
 
-
-
-  
- 
+.footer {
+  height: 295px;
+  width: 100%;
+  background-color: #2a2a2a;
+}
+.main-footer {
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.footer-nav {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #686868;
+}
+.logo-footer img{
+  opacity: 0.3;
+  margin-left: -14px;
+}
+.footer-menu {
+  width: 36%;
+}
+.footer-menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0;
+}
+.footer-link {
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro Regular";
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #686868;
+}
+.footer-link:hover , .footer-link:focus {
+  color: white;
+}
+.footer-bot-main {
+  height: 204px;
+  display: flex;
+  align-items: center;
+}
+.item-1 {
+  border-right: 1px solid #393939;
+  width: 380px;
+  text-align: justify;
+  padding-right: 80px;
+  font-family: "Lato Light", "AdobeInvisFont", "MyriadPro Regular";
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: rgba(104, 104, 104, 255);
+}
+.item-1 p {
+  line-height: 2.5rem;
+  padding: 0;
+  color: #565656;
+}
+.item-2 {
+  display: flex;
+  width: 500px;
+  justify-content: center;
+}
+.item-2 ul {
+  list-style: none;
+}
+.footer-list {
+  font-family: "Lato", "AdobeInvisFont", "MyriadPro Regular";
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #565656;
+  text-align: left;
+  text-decoration: none;
+  margin: 15px;
+}
+.item-2 .fas {
+  color: #5e5e5e;
+  font-size: 1.5rem;
+}
+.item-2 li{
+  line-height: 2.5rem;
+}
+.footer-list:hover {
+  color: white;
+  padding-left: 7px;
+}
+.item-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #565656;
+  width: 316px;
+  height: 150px;
+  padding-left: 75px;
+  border-left: 1px solid #393939;
+}
+.item-3 .fas {
+  font-size: 1.5rem;
+  color: rgba(104, 104, 104, 255);
+  transform: scaleX(-1);
+  margin-right: 9px;
+}
+.item-3 span {
+  font-family: "Lato Light", "AdobeInvisFont", "MyriadPro Regular";
+  font-size: 1.4rem;
+  color: #565656;
+  padding: 5px;
+  line-height: 1.9rem;
+}
